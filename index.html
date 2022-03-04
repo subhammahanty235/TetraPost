@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>TetraPost</title>
+  </head>
+  <body>
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-success bg-opacity-75">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Fetchman</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                     <li class="nav-item"> 
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li> 
+
+
+
+                </ul> -->
+                <!-- <form class="d-flex">
+                    <input class="form-control me-2" id="inputtxt" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form> -->
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="">Visit repo</a>
+                </li> -->
+                <!-- <li>
+                  <button>Github Repo</button>
+                </li>
+            </div>
+        </div>
+    </nav> --> 
+    <nav id="navbar">
+      <div class="logo">
+        <img src="logoimg.png" alt="Logo image">
+        <h3>TetraPost</h3>
+      </div>
+      <button>Github Repository</button>
+    </nav>
+    <!-- <div class="container">
+        <h3 class="my-3 mx-auto text-center"></h3>
+        <hr>
+
+    </div> -->
+    <div class="container">
+        <div class="col-12">
+            <label for="url" class="form-label " >URL</label>
+            <input type="text" class="form-control" id="url" placeholder="www.google.com">
+        </div>
+
+        <fieldset class="row mb-3 my-3">
+            <legend class="col-form-label col-sm-2 pt-0">Request type</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="requesttype" id="get" value="GET" checked>
+                <label class="form-check-label" for="gridRadios1">
+                  GET
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="requesttype" id="post" value="POST">
+                <label class="form-check-label" for="gridRadios2">
+                  POST
+                </label>
+              </div>
+             
+            </div>
+          </fieldset>
+        
+        <!-- content type box -->
+        <fieldset class="row mb-3 my-3">
+            <legend class="col-form-label col-sm-2 pt-0">content type</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="contenttype" id="jsonradio" value="JSON" checked>
+                <label class="form-check-label" for="json">
+                  JSON
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="contenttype" id="cusradio" value="params">
+                <label class="form-check-label" for="params">
+                  CUSTOM PARAMETERS
+                </label>
+              </div>
+             
+            </div>
+          </fieldset>
+        
+          <!-- parameters box -->
+        <div id="parameterbox">
+            <div class="row my-3">
+                <label for="url" class="col-sm-1 col-form-label">Parameter 1 </label>
+                <div class="col-md-5">
+                  <input type="text" class="form-control " placeholder="key" aria-label="key" id="parameterkey1">
+                </div>
+                <div class="col-md-5">
+                  <input type="text" class="form-control" placeholder="value" aria-label="value" id="parametervalue1">
+
+                </div>
+                <button class="btn btn-primary col-sm-1" id="addbtn">+</button>
+            </div>
+            <div id="moreparams">
+        </div>
+
+        </div>
+        <!-- json request box -->
+        <div class="form-group my-3" id="jsonbox">
+            <label for="floatingTextarea2">Enter Request Json here</label>
+            <textarea class="form-control my-2" placeholder="" id="reqjsontext" rows="3"></textarea>
+            <!-- <label for="floatingTextarea2">Comments</label> -->
+          </div>
+        <!-- /Submit button whichnwill trigger fetch api -->
+        <div class="form-group row">
+            <div class="col sm-10">
+                <button class="btn btn-outline-dark" id="submit">
+                    Submit
+                </button>
+            </div>
+        </div>
+
+        <!-- responce box -->
+        <div class="my-3" id="responcejsonbox">
+            <div class="form-group row">
+                <label for="floatingTextarea2">Responce</label>
+                <textarea class="form-control my-2" placeholder="Your responce will appear here" id="resjsontext" rows="3"></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  
+  </body>
+</html>
